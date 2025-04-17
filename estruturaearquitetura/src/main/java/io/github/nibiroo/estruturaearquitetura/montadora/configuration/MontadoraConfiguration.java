@@ -4,6 +4,7 @@ import io.github.nibiroo.estruturaearquitetura.montadora.Motor;
 import io.github.nibiroo.estruturaearquitetura.montadora.TipoMotor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class MontadoraConfiguration {
@@ -35,6 +36,7 @@ public class MontadoraConfiguration {
     }
 
     @Bean(name = "motorTurbo")
+    @Primary
     public Motor motorTurbo() {
         var motor = new Motor();
 
