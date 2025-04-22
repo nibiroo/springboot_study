@@ -2,6 +2,7 @@ package io.github.nibiroo.estruturaearquitetura.montadora.configuration;
 
 import io.github.nibiroo.estruturaearquitetura.montadora.Motor;
 import io.github.nibiroo.estruturaearquitetura.montadora.TipoMotor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -10,10 +11,10 @@ import org.springframework.context.annotation.Primary;
 public class MontadoraConfiguration {
 
     @Bean(name = "motorAspirado")
-    public Motor motorAspirado() {
+    public Motor motorAspirado(@Value("${app.montadora.motor-padrao}") Integer cavalos) {
         var motor = new Motor();
 
-        motor.setCavalos(300);
+        motor.setCavalos(cavalos);
         motor.setCilindros(8);
         motor.setModelo("XPTO-8");
         motor.setLitragem(6.0);
