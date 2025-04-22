@@ -1,13 +1,13 @@
-package io.github.nibiroo.study;
+package io.github.nibiroo.libraryapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudyApplication {
+public class LibraryapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudyApplication.class, args);
+		SpringApplication.run(LibraryapiApplication.class, args);
 	}
 
 }
